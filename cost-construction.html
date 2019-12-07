@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cost-Construction</title>
+
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	body{
+		font-family:Georgia, "Times New Roman", Times, serif;
+	}
+	.background{
+		background-color:rgba(0,153,102,1);
+		margin-left:auto;
+		margin-right:auto;
+		width:50%;	
+	}
+	h2{
+		text-align:center;
+		padding:10px;
+		background-color:rgba(0,0,0,1);
+		color:#fff;	
+		letter-spacing:2px;
+	}
+	.submit{
+		margin:10px;
+		height:30px;
+		width:100px;
+		border:none;
+		font-weight:bold;	
+	}
+	
+	
+</style>
+
+<script type="text/javascript">
+
+function refID(){
+	var a = document.frm.text1.value;
+	var b = document.frm.text2.value;
+	document.frm.text3.value=a+b;	
+}
+function total_size(){
+	var total = document.frm.text4.value * document.frm.text5.value;
+	document.frm.text6.value = total;	
+}
+function totalCost(){
+	var total = document.frm.text6.value * document.frm.text7.value;
+	document.frm.text8.value = total;	
+}
+function netBook(){
+	var total = (document.frm.text8.value * document.frm.text9.value)	/ 100;
+	document.frm.text10.value = total;
+}
+function netPlot(){
+	var total = document.frm.text8.value - document.frm.text10.value;
+	document.frm.text11.value = total;	
+}
+function down_payment_amount(){
+	var total = (document.frm.text11.value * document.frm.text12.value)	/ 100;
+	document.frm.text13.value = total;
+}
+function netEmi(){
+	var total = document.frm.text11.value - document.frm.text13.value;
+	document.frm.text14.value = total;
+}
+function monthly_emi(){
+	var total = document.frm.text14.value / document.frm.text15.value;
+	document.frm.text16.value = total;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="background">
+
+	<form name="frm" method="post">
+    	<h2>Cost Construction Form</h2>
+        <table width="600" border="0" cellspacing="0" cellpadding="0" style="margin-left:35px;">
+        
+  		<tr height="45">
+    		<td width="250">Client Name:</td>
+    		<td><input type="text" style="height:25px;" name="text1"/></td>
+  		</tr>
+            
+  		<tr height="45">
+    		<td width="250">Plot No:</td>
+    		<td><input type="text" style="height:25px;" name="text2" onchange="refID()"/></td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Ref. ID:</td>
+    		<td><input type="text" style="height:25px;" name="text3" /></td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Plot size:</td>
+    		<td><input type="text" style="height:25px; width:100px;" name="text4"/> * <input type="text" style="height:25px; width:100px;" name="text5" onchange="total_size()"/></td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Total Size:</td>
+    		<td><input type="text" style="height:25px;" name="text6" onfocus="total_size()"/> sqft.</td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Cost of construction square:</td>
+    		<td><input type="text" style="height:25px;" name="text7"/></td>
+  		</tr height="40">
+        
+  		<tr height="45">
+    		<td width="250"> Total cost:</td>
+    		<td><input type="text" style="height:25px;" name="text8" onfocus="totalCost()"/></td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Booking:</td>
+    		<td><input type="text" style="height:25px;" name="text9"/> %</td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Net Booking:</td>
+    		<td><input type="text" style="height:25px;" name="text10" onfocus="netBook()"/></td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Net plot Amount:</td>
+    		<td><input type="text" style="height:25px;" name="text11" onfocus="netPlot()"/></td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250"> Down Payment:</td>
+    		<td><input type="text" style="height:25px;" name="text12"/> %</td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Down Payment Amount:</td>
+    		<td><input type="text" style="height:25px;" name="text13" onfocus="down_payment_amount()"/></td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Net EMI Amount:</td>
+    		<td><input type="text" style="height:25px;" name="text14" onfocus="netEmi()"/></td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">EMI duration:</td>
+    		<td><input type="text" style="height:25px;" name="text15"/> (month)</td>
+  		</tr>
+        
+  		<tr height="45">
+    		<td width="250">Monthly EMI:</td>
+    		<td><input type="text" style="height:25px;" name="text16" onfocus="monthly_emi()"/></td>
+  		</tr>
+</table>
+      
+      	<center>
+        <input type="submit" value="Submit" class="submit" />
+        </center>
+    </form>
+
+</div>
+</body>
+</html>

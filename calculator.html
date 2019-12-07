@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calculator</title>
+
+<script type="text/javascript">
+	function plus(){
+		document.calculator.display.value += "+";
+	}
+	
+	function minus(){
+		document.calculator.display.value += "-";
+	}
+	
+	function multiplication(){
+		document.calculator.display.value += "*";
+	}
+	
+	function division(){
+		document.calculator.display.value += "/";
+	}
+	
+	function mod(){
+		document.calculator.display.value += "%";
+	}
+	
+	function dot(){
+		document.calculator.display.value += ".";
+	}
+	
+	function clear(){
+		document.calculator.display.value = "";
+	}
+</script>
+
+</head>
+
+<body bgcolor="#339999"> 
+
+<center>
+	<h2 style="font-size:70px; color:#fff; text-transform:uppercase; font-weight:bold;">Calculator</h2>
+    
+    <div style="width:312px; background-color:#99CC99; padding:5px; border-radius:5px; box-shadow:0 0 10px #000;">
+    
+    <form name="calculator">
+    
+    	<input name="display" placeholder="0" style="width:290px; height:60px; text-align:right; font-size:30px; border-radius:8px; margin:3px; border:none;"/>
+        
+        <input type="button" value="7" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '7'"/>
+        <input type="button" value="8" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '8'"/>
+        <input type="button" value="9" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '9'"/>
+        <input type="button" value="+" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="plus()"/>
+        
+        <input type="button" value="4" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '4'"/>
+        <input type="button" value="5" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '5'"/>
+        <input type="button" value="6" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '6'"/>
+        <input type="button" value="-" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="minus()"/>
+        
+        <input type="button" value="1" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '1'"/>
+        <input type="button" value="2" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '2'"/>
+        <input type="button" value="3" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '3'"/>
+        <input type="button" value="*" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="multiplication()"/>
+        
+        <input type="button" value="0" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value += '0'"/>
+        <input type="button" value="%" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="mod()"/>
+        <input type="button" value="." style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="dot()"/>
+        <input type="button" value="/" style="height:60px; width:60px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="division()"/>
+        
+        
+        <input type="button" value="=" style="height:60px; width:134px; font-size:30px; border-radius:8px; border:none; margin:5px;" onclick="document.calculator.display.value = eval(document.calculator.display.value)"/>
+        <input type="reset" value="C" style="height:60px; width:134px; font-size:30px; border-radius:8px; border:none; margin:5px;"/>
+    </form>
+    
+    </div>
+</center>
+
+</body>
+</html>
